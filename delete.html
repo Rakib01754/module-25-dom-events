@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+</head>
+
+<body>
+    <section>
+        <div id="sample-image">
+            <img src="images/rose.jpg" alt="" style="height: 300px; width:300px;" id="img">
+        </div>
+
+        <input type="text" id="passcode" placeholder=" type 1234 to delete"><br><br>
+        <button id="delete-button" disabled>Click To delete</button>
+    </section>
+
+
+
+
+    <script>
+        document.getElementById('passcode').addEventListener('keyup', function () {
+            const inputContent = passcode.value;
+            const btn = document.getElementById('delete-button');
+            if (inputContent === '1234') {
+                btn.removeAttribute('disabled');
+            }
+            else {
+                btn.setAttribute('disabled', true);
+            }
+
+        })
+        document.getElementById('delete-button').addEventListener('click', function () {
+            const imageArea = document.getElementById('sample-image');
+            const image = document.getElementById('img');
+            imageArea.removeChild(image);
+            const p = document.createElement('p');
+            p.innerText = 'The Image is deleted';
+            p.style.opacity = '0.2'
+            imageArea.appendChild(p);
+            passcode.value = '';
+        })
+    </script>
+</body>
+
+</html>

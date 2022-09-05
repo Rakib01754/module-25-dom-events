@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <h1 class="heading">Html DOM Events</h1>
+    <hr>
+    <button onclick="console.log('Button Clicked')">Click Me</button>
+    <button onclick="console.log('100')">Click Me</button>
+    <hr>
+    <p>Option-1-Direct Set on Html Onclick</p>
+    <button onclick="document.body.style.backgroundColor='red'">Click For Red
+    </button>
+    <hr>
+    <p>Option-2-Write a function on script and then call to html</p>
+    <button onclick="makeBlue()">Click For Blue</button>
+    <hr>
+    <p>Option-3-Write a function on script and get the element on script by the id and call the function</p>
+    <button id="make-purple">Click For
+        purple</button>
+    <hr>
+    <p> Option-4- get the element on script by the id and write function on the same line</p>
+    <button id="make-tomato">Click For
+        tomato
+    </button>
+    <hr>
+    <p>Option-5-get element by the id and add event listener and call the function with the click event</p>
+    <button id="make-green">Click For green</button>
+    <hr>
+    <p>Option-6-get element by the id and add event listener and write a function inside the listener </p>
+    <button id="make-pink">Click For pink</button>
+    <hr>
+
+
+
+
+
+
+
+
+
+    <script src="js/event.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Summery</title>
+</head>
+
+<body>
+
+    <header>
+        <h4>Please Drop Your comment Here</h4>
+        <div id="comment-area">
+
+        </div>
+
+        <textarea name="" id="text-area" cols="30" rows="7" placeholder="please write your comment here"></textarea>
+        <br>
+        <button id="post-comment">Post Your Comment Now</button>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        document.getElementById('post-comment').addEventListener('click', function () {
+            const textArea = document.getElementById('text-area');
+            const textAreaValue = textArea.value;
+            const para = document.createElement('p');
+            const changedvalue = para.innerText = textAreaValue;
+            const commentArea = document.getElementById('comment-area');
+            commentArea.appendChild(para);
+            textArea.value = '';
+        })
+    </script>
+</body>
+
+</html>

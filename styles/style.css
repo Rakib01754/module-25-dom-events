@@ -1,0 +1,14 @@
+body {
+    background-color: grey;
+}
+
+.heading {
+    color: tomato;
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+}
+
+p {
+    color: white;
+}
